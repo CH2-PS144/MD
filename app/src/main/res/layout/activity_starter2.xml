@@ -9,44 +9,58 @@
 
     <ImageView
         android:id="@+id/img_starter1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
         android:src="@drawable/logo_starter2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/invormasi_starter"
+        android:id="@+id/informasi_starter"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/starter_tx"
+        android:layout_marginTop="100dp"
+        android:text="@string/starter2_tx"
         android:textAlignment="center"
-        android:layout_marginTop="150dp"
+        android:textColor="@color/biru_tua"
+        android:textStyle="bold"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/img_starter1" />
 
+    <ImageView
+        android:id="@+id/slider_starter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:src="@drawable/slider1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/informasi_starter" />
+
     <Button
         android:layout_width="140dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="72dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="48dp"
         android:text="@string/starter_btn_lanjut"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.705"
+        app:layout_constraintHorizontal_bias="0.512"
         app:layout_constraintStart_toEndOf="@+id/button"
-        app:layout_constraintTop_toBottomOf="@+id/invormasi_starter" />
+        app:layout_constraintTop_toBottomOf="@+id/slider_starter" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="140dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="72dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="48dp"
         android:text="@string/starter_btn_lewati"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.095"
+        app:layout_constraintHorizontal_bias="0.173"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/invormasi_starter" />
+        app:layout_constraintTop_toBottomOf="@+id/slider_starter" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
