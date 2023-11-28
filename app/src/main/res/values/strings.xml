@@ -13,7 +13,10 @@
     <string name="kelas_7">Kelas VII</string>
     <string name="kelas_8">Kelas VIII</string>
     <string name="kelas_9">Kelas IX</string>
+    <string name="besaran_dan_pengukuran">Besaran "&amp;" Pengukuran</string>
     <string name="ayo_belajar">Ayo Belajar</string>
+    <string name="mulai">Mulai</string>
+    <string name="jumlah_soal">Jumlah Soal : 5</string>
     <string name="starter_tx">Pindai soal fisika untuk hasil \n instan</string>
     <string name="starter2_tx">Telusuri berbagai rumus dan \n soal</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
