@@ -13,6 +13,9 @@
         android:theme="@style/Theme.PhysEdu"
         tools:targetApi="31">
         <activity
+            android:name=".activity.Silabus_Activity"
+            android:exported="false" />
+        <activity
             android:name=".activity.Starter2"
             android:exported="false" />
         <activity
