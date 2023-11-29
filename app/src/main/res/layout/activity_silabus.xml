@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+<<<<<<< HEAD
     android:background="@color/blue"
     tools:ignore="MissingConstraints"
     tools:context=".activity.Silabus_Activity">
@@ -39,5 +40,8 @@
 
     </LinearLayout>
 
+=======
+    tools:context=".activity.Syllabus">
+>>>>>>> 5da132af6670b650dbae8e0ba3e19fb8ed87b18d
 
 </androidx.constraintlayout.widget.ConstraintLayout>
