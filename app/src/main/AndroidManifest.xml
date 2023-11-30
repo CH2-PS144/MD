@@ -13,7 +13,13 @@
         android:theme="@style/Theme.PhysEdu"
         tools:targetApi="31">
         <activity
-            android:name=".activity.Syllabus"
+            android:name=".activity.PilganActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.MateriBesaran"
+            android:exported="false" />
+        <activity
+            android:name=".activity.Kelas"
             android:exported="false" />
         <activity
             android:name=".activity.Starter2"
