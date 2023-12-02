@@ -1,0 +1,31 @@
+<!-- res/drawable/custom_radio_button.xml -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_checked="true">
+        <layer-list>
+            <item>
+                <shape android:shape="rectangle">
+                    <solid android:color="#F5F5F5" /> <!-- Background color when checked -->
+                    <corners android:radius="8dp" /> <!-- Corner radius -->
+                    <stroke android:color="#2196F3" android:width="2dp" /> <!-- Border color and width -->
+                </shape>
+            </item>
+            <item android:top="2dp" android:left="2dp" android:right="2dp" android:bottom="2dp">
+                <shape android:shape="rectangle">
+                    <solid android:color="#FFFFFF" /> <!-- Inner background color when checked -->
+                    <corners android:radius="6dp" /> <!-- Inner corner radius -->
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+    <item>
+        <layer-list>
+            <item>
+                <shape android:shape="rectangle">
+                    <solid android:color="#FFFFFF" /> <!-- Background color when unchecked -->
+                    <corners android:radius="4dp" /> <!-- Corner radius -->
+                    <stroke android:color="#0068AD" android:width="2dp" /> <!-- Border color and width -->
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+</selector>

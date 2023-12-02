@@ -4,9 +4,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.physedu.R
 
-class Syllabus : AppCompatActivity() {
+class PilganActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_silabus)
+        setContentView(R.layout.activity_pilgan)
     }
 }
