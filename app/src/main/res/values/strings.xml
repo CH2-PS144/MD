@@ -20,6 +20,12 @@
     <string name="starter_tx">Pindai soal fisika untuk hasil \n instan</string>
     <string name="starter2_tx">Telusuri berbagai rumus dan \n soal</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="benar">Benar</string>
+    <string name="salah">Salah</string>
+    <string name="score">Lihat Score </string>
+    <string name="ucapan_selamat">Selamat\n
+        Anda Lulus Pada Materi Besaran dan Pengukuran Dengan Score
+</string>
 
     <string name="Head_materi_besaran">Haii Physedu Friends!</string>
     <string name="head2_yuk_belajar">Yukk Belajar Tentang Pengukuran Dasar</string>
