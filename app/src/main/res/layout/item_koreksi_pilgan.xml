@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/itemPilgan"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/questionTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="1. Besaran yang dapat diukur dengan menggunakan mistar adalah ..."
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@id/optionsRadioGroup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/optionsRadioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/questionTextView"
+        android:layout_marginTop="16dp"
+        android:padding="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/questionTextView">
+
+        <RadioButton
+            android:id="@+id/optionARadioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/custom_radio_button"
+            android:text="A. Panjang" />
+
+        <RadioButton
+            android:id="@+id/optionBRadioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/custom_radio_button"
+            android:text="B. Waktu" />
+
+        <RadioButton
+            android:id="@+id/optionCRadioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/custom_radio_button"
+            android:text="C. Suhu" />
+
+        <RadioButton
+            android:id="@+id/optionDRadioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/custom_radio_button"
+            android:text="D. Massa" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            tools:text="@string/benar"
+            android:textSize="24sp"
+            android:textAlignment="center"
+            android:padding="10dp"
+            android:background="@color/hijau"/>
+
+    </RadioGroup>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

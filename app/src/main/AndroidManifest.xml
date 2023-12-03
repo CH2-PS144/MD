@@ -13,25 +13,31 @@
         android:theme="@style/Theme.PhysEdu"
         tools:targetApi="31">
         <activity
+            android:name=".activity.HasilActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.KoreksiPilganActivity"
+            android:exported="false" />
+        <activity
             android:name=".activity.PilganActivity"
             android:exported="false" />
         <activity
             android:name=".activity.MateriBesaran"
             android:exported="false" />
         <activity
-            android:name=".activity.Kelas"
+            android:name=".activity.KelasActivity"
             android:exported="false" />
         <activity
             android:name=".activity.Starter2"
             android:exported="false" />
         <activity
+            android:name=".activity.MainActivity"
+            android:exported="true"/>
+        <activity
             android:name=".activity.Starter1"
             android:exported="false" />
         <activity
             android:name=".activity.SplashScreen"
-            android:exported="false" />
-        <activity
-            android:name=".activity.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -39,10 +45,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".activity.Camera"
-            android:exported="false" /> <!-- Trigger Google Play services to install the backported photo picker module. -->
-        <!-- suppress AndroidDomInspection -->
+
         <service
             android:name="com.google.android.gms.metadata.ModuleDependencies"
             android:enabled="false"
