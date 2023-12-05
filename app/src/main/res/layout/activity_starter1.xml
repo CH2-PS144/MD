@@ -5,12 +5,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.Starter1">
+    tools:context=".starter.Starter1">
 
     <ImageView
         android:id="@+id/img_starter1"
-        android:layout_width="300dp"
+        android:layout_width="350dp"
         android:layout_height="300dp"
+        android:layout_marginTop="35dp"
         android:src="@drawable/logo_starter1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -20,7 +21,7 @@
         android:id="@+id/informasi_starter"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="70dp"
         android:text="@string/starter_tx"
         android:textAlignment="center"
         android:textSize="20sp"
@@ -34,7 +35,7 @@
         android:id="@+id/slider_starter"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="70dp"
         android:src="@drawable/slider"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -45,7 +46,7 @@
         android:id="@+id/btn_lanjut"
         android:layout_width="140dp"
         android:layout_height="70dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="70dp"
         android:text="@string/starter_btn_lanjut"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.512"
@@ -55,8 +56,8 @@
     <Button
         android:id="@+id/btn_lewati"
         android:layout_width="140dp"
-        android:layout_height="70dp"
-        android:layout_marginTop="48dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="70dp"
         android:text="@string/starter_btn_lewati"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.173"

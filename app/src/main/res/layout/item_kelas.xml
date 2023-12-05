@@ -19,20 +19,20 @@
         android:background="@color/ungu">
 
         <ImageView
-            android:id="@+id/ivProfile"
+            android:id="@+id/iv_gbr_kelas"
             android:layout_width="130dp"
             android:layout_height="130dp"
             android:layout_marginEnd="55dp"
             card_view:layout_constraintTop_toTopOf="parent"
             card_view:layout_constraintBottom_toBottomOf="parent"
             card_view:layout_constraintEnd_toEndOf="parent"
-            tools:src="@drawable/vektor_kelas"/>
+            tools:src="@tools:sample/avatars"/>
 
         <TextView
-            android:id="@+id/tvUser"
+            android:id="@+id/tvKelasUser"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_toEndOf="@+id/ivProfile"
+            android:layout_toEndOf="@+id/iv_gbr_kelas"
             android:textColor="@color/white"
             android:textSize="16sp"
             android:textStyle="bold"

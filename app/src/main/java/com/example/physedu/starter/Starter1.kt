@@ -10,7 +10,7 @@ import com.example.physedu.R
 class Starter1 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_starter)
+        setContentView(R.layout.activity_starter1)
         window?.setFlags(FLAG_FULLSCREEN, FLAG_FULLSCREEN)
         supportActionBar?.hide()
 
@@ -26,6 +26,5 @@ class Starter1 : AppCompatActivity() {
             startActivity(Intent(this, Starter2::class.java))
             finish()
         }
-
     }
 }
