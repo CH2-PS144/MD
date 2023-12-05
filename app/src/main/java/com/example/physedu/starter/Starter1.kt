@@ -1,4 +1,4 @@
-package com.example.physedu.activity
+package com.example.physedu.starter
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.WindowManager.LayoutParams.FLAG_FULLSCREEN
 import android.widget.Button
 import com.example.physedu.R
+import com.example.physedu.activity.MainActivity
 
 class Starter1 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

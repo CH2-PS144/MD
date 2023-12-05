@@ -1,15 +1,15 @@
-package com.example.physedu.activity
+package com.example.physedu.fragment
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.physedu.R
-import com.example.physedu.databinding.FragmentHomeBinding
+import com.example.physedu.activity.KelasUser
+import com.example.physedu.activity.KelasUserAdapter
 
 class HomeFragment : Fragment() {
     private lateinit var rvkelasUser: RecyclerView
