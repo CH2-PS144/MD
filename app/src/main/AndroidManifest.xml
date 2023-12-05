@@ -28,16 +28,16 @@
             android:name=".activity.KelasActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.Starter2"
+            android:name=".starter.Starter2"
             android:exported="false" />
         <activity
             android:name=".activity.MainActivity"
             android:exported="true"/>
         <activity
-            android:name=".activity.Starter1"
+            android:name=".starter.Starter1"
             android:exported="false" />
         <activity
-            android:name=".activity.SplashScreen"
+            android:name=".starter.SplashScreen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

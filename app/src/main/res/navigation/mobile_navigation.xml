@@ -6,13 +6,13 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="com.example.physedu.activity.HomeFragment"
+        android:name="com.example.physedu.fragment.HomeFragment"
         android:label="@string/title_home"
         tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/navigation_kamera"
-        android:name="com.example.physedu.activity.KameraFragment"
+        android:name="com.example.physedu.fragment.KameraFragment"
         android:label="@string/title_kamera"
         tools:layout="@layout/fragment_kamera" />
 
