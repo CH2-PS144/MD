@@ -4,9 +4,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.physedu.R
 
-class Starter2 : AppCompatActivity() {
+class MateriBesaranActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_starter2)
+        setContentView(R.layout.activity_materi_besaran)
     }
 }

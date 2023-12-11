@@ -1,7 +1,9 @@
 <resources>
     <string name="app_name">PhysEdu</string>
+    <string name="id_team">CH2 - PS144</string>
     <string name="starter_btn_lewati">Lewati</string>
     <string name="starter_btn_lanjut">Lanjut</string>
+    <string name="starter_btn_kembali">Kembali</string>
     <string name="title_kamera">Kamera</string>
     <string name="title_home">Home</string>
     <string name="title_about">About</string>
@@ -10,9 +12,6 @@
     <string name="ayoo">Ayoo!!</string>
     <string name="pilih_kelasmu">Pilih Kelas Kamu</string>
     <string name="kategori_kelas">Kategori Kelas</string>
-    <string name="kelas_7">Kelas VII</string>
-    <string name="kelas_8">Kelas VIII</string>
-    <string name="kelas_9">Kelas IX</string>
     <string name="besaran_dan_pengukuran">Besaran "&amp;" Pengukuran</string>
     <string name="ayo_belajar">Ayo Belajar</string>
     <string name="mulai">Mulai</string>
@@ -23,6 +22,28 @@
     <string name="benar">Benar</string>
     <string name="salah">Salah</string>
     <string name="score">Lihat Score </string>
+
+    <string-array name="kelas">
+        <item>
+            <item>Kelas VII</item>
+            <item>Kelas VIII</item>
+            <item>Kelas IX</item>
+        </item>
+    </string-array>
+
+    <string-array name="mulai">
+        <item>Ayo Mulai</item>
+        <item>Ayo Mulai</item>
+        <item>Ayo Mulai</item>
+    </string-array>
+
+    <string-array name="gambar">
+        <item>@drawable/icon_kelas_1</item>
+        <item>@drawable/icon_kelas_2</item>
+        <item>@drawable/icon_kelas_3</item>
+    </string-array>
+
+
     <string name="ucapan_selamat">Selamat\n
         Anda Lulus Pada Materi Besaran dan Pengukuran Dengan Score
 </string>

@@ -1,4 +1,4 @@
-package com.example.physedu.activity
+package com.example.physedu.starter
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
