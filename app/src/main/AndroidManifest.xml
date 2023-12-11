@@ -22,7 +22,7 @@
             android:name=".activity.PilganActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.MateriBesaran"
+            android:name=".activity.MateriBesaranActivity"
             android:exported="false" />
         <activity
             android:name=".activity.KelasActivity"

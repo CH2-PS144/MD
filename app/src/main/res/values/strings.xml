@@ -23,12 +23,6 @@
     <string name="salah">Salah</string>
     <string name="score">Lihat Score </string>
 
-    <string-array name="gambar">
-        <item>@drawable/icon_kelas_1</item>
-        <item>@drawable/icon_kelas_2</item>
-        <item>@drawable/icon_kelas_3</item>
-    </string-array>
-
     <string-array name="kelas">
         <item>
             <item>Kelas VII</item>
@@ -36,6 +30,19 @@
             <item>Kelas IX</item>
         </item>
     </string-array>
+
+    <string-array name="mulai">
+        <item>Ayo Mulai</item>
+        <item>Ayo Mulai</item>
+        <item>Ayo Mulai</item>
+    </string-array>
+
+    <string-array name="gambar">
+        <item>@drawable/icon_kelas_1</item>
+        <item>@drawable/icon_kelas_2</item>
+        <item>@drawable/icon_kelas_3</item>
+    </string-array>
+
 
     <string name="ucapan_selamat">Selamat\n
         Anda Lulus Pada Materi Besaran dan Pengukuran Dengan Score
