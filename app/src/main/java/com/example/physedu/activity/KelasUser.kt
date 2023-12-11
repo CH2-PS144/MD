@@ -5,7 +5,7 @@ import kotlinx.parcelize.Parcelize
 
 @Parcelize
 data class KelasUser (
-    val kelas: String,
-    val mulai : String,
-    val gambar: Int
+    var kelas: String = " ",
+    var mulai : String = " ",
+    var gambar: Int = 0
 ): Parcelable
