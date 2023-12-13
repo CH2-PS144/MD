@@ -27,9 +27,12 @@ class HomeFragment : Fragment() {
         rvKelasUser = view.findViewById(R.id.rv_kelasUser)
         rvKelasUser.setHasFixedSize(true)
 
-        list.addAll(ClassObject.listDataKelas)
-        showRecyclerList()
-
+        if (list.isEmpty()) {
+            list.addAll(ClassObject.listDataKelas)
+            showRecyclerList()
+        }else{
+            showRecyclerList()
+        }
         return view
     }
 
