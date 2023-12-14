@@ -22,6 +22,10 @@
     <string name="benar">Benar</string>
     <string name="salah">Salah</string>
     <string name="score">Lihat Score </string>
+    <string name="content_tab_text">Kelas %1$d</string>
+    <string name="tab_text_1">Silabus</string>
+    <string name="tab_text_2">Latihan Soal</string>
+    <string name="tab_text_3">Referensi Video</string>
 
     <string-array name="kelas">
         <item>
@@ -59,4 +63,8 @@
     <string name="besaran_turunan">Besaran Turunan adalah besaran yang ditetapkan berdasarkan besaran pokok. Satuannya pun diturunkan dari beberapa satuan besaran pokok. Sebagai contoh untuk menentukan kecepatan suatu benda bergerak, kita perlu mengukur panjang lintasan dan waktu yang diperlukan untuk menempuh lintasan tersebut.</string>
     <string name="besaran_satuan">Satuan Dalam melakukan pengukuran, agar seragam maka dianggap perlu untuk menetapkan suatu pembanding dalam pengukuran. Pembanding ini tetap, tidak berubah-ubah dan dapat digunakan secara umum di mana saja. Inilah yang disebut sebagai satuan baku.\n\n
     Satuan yang tidak tetap, misalnya kaki adalah satuan tidak baku. Adapun untuk suhu, satuan yang sering kita gunakan adalah derajat Celsius, namun ini bukan satuan standar dalam Sains. Di negara sub tropis sering digunakan satuan Fahrenheit. Dalam Sains, satuan suhu yang digunakan sebagai Standar Internasional adalah Kelvin.</string>
+    <string name="upload">Upload</string>
+    <string name="gallery">Galeri</string>
+    <string name="camera_x">Camera X</string>
+    <string name="camera">Camera</string>
 </resources>
