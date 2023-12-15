@@ -1,6 +1,7 @@
-package com.example.physedu.activity
+package com.example.physedu.`object`
 
 import com.example.physedu.R
+import com.example.physedu.activity.KelasUser
 
 object ClassObject {
 

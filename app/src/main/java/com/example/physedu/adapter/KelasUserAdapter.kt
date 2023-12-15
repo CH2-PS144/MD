@@ -43,7 +43,6 @@ class KelasUserAdapter (private val listKelas:ArrayList<KelasUser>) : RecyclerVi
 
     override fun getItemCount(): Int = listKelas.size
 
-
     interface OnItemClickCallback {
         fun onItemClicked(data: KelasUser)
     }

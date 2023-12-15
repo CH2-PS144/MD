@@ -1,18 +1,19 @@
 package com.example.physedu.fragment
 
-import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.physedu.R
-import com.example.physedu.activity.ClassObject
+import com.example.physedu.activity.KelasActivity
+import com.example.physedu.`object`.ClassObject
 import com.example.physedu.activity.KelasUser
 import com.example.physedu.adapter.KelasUserAdapter
-import com.example.physedu.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
 
@@ -40,5 +41,17 @@ class HomeFragment : Fragment() {
         rvKelasUser.layoutManager = LinearLayoutManager(context)
         val listHeroAdapter = KelasUserAdapter(list)
         rvKelasUser.adapter = listHeroAdapter
+
+        listHeroAdapter.setOnItemClickCallback(object : KelasUserAdapter.OnItemClickCallback {
+            override fun onItemClicked(data: KelasUser) {
+                showSelectedKelas(data)
+            }
+        })
+    }
+
+    private fun showSelectedKelas(pilihkelas: KelasUser) {
+        Toast.makeText(context, "Kamu memilih " + pilihkelas.kelas, Toast.LENGTH_SHORT).show()
+        val moveWithObjectIntent = Intent(context, KelasActivity::class.java)
+        startActivity(moveWithObjectIntent)
     }
 }
