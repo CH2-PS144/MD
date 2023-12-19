@@ -31,7 +31,7 @@ class HomeFragment : Fragment() {
         if (list.isEmpty()) {
             list.addAll(ClassObject.listDataKelas)
             showRecyclerList()
-        }else{
+        } else {
             showRecyclerList()
         }
         return view
