@@ -24,7 +24,7 @@
         android:layout_marginTop="70dp"
         android:text="@string/starter2_tx"
         android:textAlignment="center"
-        android:textColor="@color/biru_tua"
+        android:textColor="@color/dark_blue"
         android:textStyle="bold"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"

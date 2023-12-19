@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/cardview"
+    android:id="@+id/card_view"
     android:layout_width="375dp"
     android:layout_height="wrap_content"
     android:layout_gravity="center"
@@ -18,13 +18,18 @@
         android:layout_height="120dp"
         android:background="@color/white">
 
-        <ImageView
+        <TextView
+            android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/circle_number"
-            tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="45dp"
-            tools:ignore="MissingConstraints" />
+            android:layout_marginStart="20dp"
+            android:text="01"
+            android:textColor="@color/blue"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            card_view:layout_constraintBottom_toBottomOf="parent"
+            card_view:layout_constraintStart_toStartOf="parent"
+            card_view:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/tvUser"
@@ -33,9 +38,10 @@
             android:textColor="@color/black"
             android:textSize="16sp"
             android:textStyle="bold"
-            tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="80dp"
-            tools:layout_editor_absoluteY="50dp"
+            android:layout_marginStart="20dp"
+            card_view:layout_constraintBottom_toBottomOf="parent"
+            card_view:layout_constraintStart_toEndOf="@+id/textView"
+            card_view:layout_constraintTop_toTopOf="parent"
             tools:text="@string/besaran_dan_pengukuran" />
 
         <TextView
@@ -43,17 +49,18 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
             android:text="@string/jumlah_soal"
-            card_view:layout_constraintTop_toBottomOf="@id/tvUser"
-            tools:layout_editor_absoluteX="80dp"
-            tools:ignore="MissingConstraints" />
+            card_view:layout_constraintStart_toEndOf="@+id/textView"
+            android:layout_marginStart="20dp"
+            card_view:layout_constraintTop_toBottomOf="@id/tvUser" />
 
         <Button
             android:layout_width="90dp"
             android:layout_height="40dp"
             android:backgroundTint="@color/blue"
-            tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="279dp"
-            tools:layout_editor_absoluteY="40dp"
+            card_view:layout_constraintBottom_toBottomOf="parent"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintStart_toEndOf="@+id/tvUser"
+            card_view:layout_constraintTop_toTopOf="parent"
             tools:text="@string/mulai" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
