@@ -10,8 +10,10 @@ import android.util.Log
 import android.widget.Toast
 import androidx.activity.result.PickVisualMediaRequest
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.appcompat.widget.Toolbar
 import androidx.core.content.ContextCompat
 import androidx.core.net.toUri
+import com.example.physedu.R
 import com.example.physedu.activity.CameraActivity.Companion.CAMERAX_RESULT
 import com.example.physedu.databinding.ActivityMainCameraBinding
 import com.example.physedu.getImageUri
@@ -42,6 +44,20 @@ class MainActivityCamera : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainCameraBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        val toolbar: Toolbar = findViewById(R.id.toolbar)
+        setSupportActionBar(toolbar)
+
+        supportActionBar?.apply {
+            setDisplayHomeAsUpEnabled(true)
+            setDisplayShowHomeEnabled(true)
+            setTitle("Halaman Utama")
+        }
+        toolbar.setNavigationOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
 
         if (!allPermissionsGranted()) {
             requestPermissionLauncher.launch(REQUIRED_PERMISSION)
