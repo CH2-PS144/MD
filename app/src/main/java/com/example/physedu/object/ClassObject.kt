@@ -26,7 +26,7 @@ object ClassObject {
     val listDataKelas: ArrayList<KelasUser>
         get() {
             val list = arrayListOf<KelasUser>()
-            for (position in nameClass.indices ) {
+            for (position in nameClass.indices) {
                 val grade = KelasUser()
                 grade.kelas = nameClass[position]
                 grade.mulai = textMulai[position]
