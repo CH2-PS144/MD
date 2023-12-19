@@ -13,15 +13,14 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.widget.Toolbar
 import androidx.core.content.ContextCompat
 import androidx.core.net.toUri
+import com.bumptech.glide.Glide
 import com.example.physedu.R
 import com.example.physedu.activity.CameraActivity.Companion.CAMERAX_RESULT
-import com.example.physedu.databinding.ActivityMainCameraBinding
-import com.example.physedu.getImageUri
+import com.example.physedu.databinding.ActivityResultBinding
 
-class MainActivityCamera : AppCompatActivity() {
-    private lateinit var binding: ActivityMainCameraBinding
+class ResultActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityResultBinding
 
-    private var currentImageUri: Uri? = null
 
     private val requestPermissionLauncher =
         registerForActivityResult(
@@ -42,7 +41,7 @@ class MainActivityCamera : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainCameraBinding.inflate(layoutInflater)
+        binding = ActivityResultBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         val toolbar: Toolbar = findViewById(R.id.toolbar)
@@ -63,63 +62,15 @@ class MainActivityCamera : AppCompatActivity() {
             requestPermissionLauncher.launch(REQUIRED_PERMISSION)
         }
 
-        binding.galleryButton.setOnClickListener { startGallery() }
-        binding.cameraButton.setOnClickListener { startCamera() }
-        binding.cameraXButton.setOnClickListener { startCameraX() }
-        binding.uploadButton.setOnClickListener { uploadImage() }
-    }
+        val imageUriString = intent.getStringExtra("IMAGE_URI")
+        val imageUri = Uri.parse(imageUriString)
 
-    private fun startGallery() {
-        launcherGallery.launch(PickVisualMediaRequest(ActivityResultContracts.PickVisualMedia.ImageOnly))
-    }
-
-    private val launcherGallery = registerForActivityResult(
-        ActivityResultContracts.PickVisualMedia()
-    ) { uri: Uri? ->
-        if (uri != null) {
-            currentImageUri = uri
-            showImage()
-        } else {
-            Log.d("Photo Picker", "No media selected")
-        }
-    }
-
-    private fun startCamera() {
-        currentImageUri = getImageUri(this)
-        launcherIntentCamera.launch(currentImageUri)
-    }
-
-    private val launcherIntentCamera = registerForActivityResult(
-        ActivityResultContracts.TakePicture()
-    ) { isSuccess ->
-        if (isSuccess) {
-            showImage()
-        }
-    }
-
-    private fun startCameraX() {
-        val intent = Intent(this, CameraActivity::class.java)
-        launcherIntentCameraX.launch(intent)
-    }
-
-    private val launcherIntentCameraX = registerForActivityResult(
-        ActivityResultContracts.StartActivityForResult()
-    ) {
-        if (it.resultCode == CAMERAX_RESULT) {
-            currentImageUri = it.data?.getStringExtra(CameraActivity.EXTRA_CAMERAX_IMAGE)?.toUri()
-            showImage()
-        }
-    }
-
-    private fun showImage() {
-        currentImageUri?.let {
-            Log.d("Image URI", "showImage: $it")
-            binding.previewImageView.setImageURI(it)
-        }
-    }
-
-    private fun uploadImage() {
-        Toast.makeText(this, "Fitur ini belum tersedia", Toast.LENGTH_SHORT).show()
+        // Tampilkan gambar menggunakan Glide
+        Glide.with(this)
+            .load(imageUri)
+            .placeholder(R.drawable.ic_place_holder) // Gambar placeholder jika URI kosong
+            .error(R.drawable.ic_place_holder) // Gambar error jika terjadi kesalahan
+            .into(binding.previewImageView)
     }
 
     companion object {
