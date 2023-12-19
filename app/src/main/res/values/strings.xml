@@ -12,7 +12,7 @@
     <string name="ayoo">Ayoo!!</string>
     <string name="pilih_kelasmu">Pilih Kelas Kamu</string>
     <string name="kategori_kelas">Kategori Kelas</string>
-    <string name="besaran_dan_pengukuran">Besaran "&amp;" Pengukuran</string>
+    <string name="besaran_dan_pengukuran">Besaran " &amp; " Pengukuran</string>
     <string name="ayo_belajar">Ayo Belajar</string>
     <string name="mulai">Mulai</string>
     <string name="jumlah_soal">Jumlah Soal : 5</string>
@@ -48,8 +48,8 @@
     </string-array>
 
 
-    <string name="ucapan_selamat">Selamat\n
-        Anda Lulus Pada Materi Besaran dan Pengukuran Dengan Score
+    <string name="ucapan_selamat">Wow!!\n
+        selamat ya! Kamu telah melewati tantangan soal fisika tentang Besaran dan Pengukuran Semangat terus belajar fisika, pasti bisa lebih paham lagi
 </string>
 
     <string name="Head_materi_besaran">Haii Physedu Friends!</string>
@@ -64,7 +64,10 @@
     <string name="besaran_satuan">Satuan Dalam melakukan pengukuran, agar seragam maka dianggap perlu untuk menetapkan suatu pembanding dalam pengukuran. Pembanding ini tetap, tidak berubah-ubah dan dapat digunakan secara umum di mana saja. Inilah yang disebut sebagai satuan baku.\n\n
     Satuan yang tidak tetap, misalnya kaki adalah satuan tidak baku. Adapun untuk suhu, satuan yang sering kita gunakan adalah derajat Celsius, namun ini bukan satuan standar dalam Sains. Di negara sub tropis sering digunakan satuan Fahrenheit. Dalam Sains, satuan suhu yang digunakan sebagai Standar Internasional adalah Kelvin.</string>
     <string name="upload">Upload</string>
-    <string name="gallery">Galeri</string>
-    <string name="camera_x">Camera X</string>
+    <string name="Ulangi">Ulangi</string>
+    <string name="hasil">Hasil </string>
     <string name="camera">Camera</string>
+    <string name="description_image_study_bg">Deskripsi Konten untuk Gambar Silabus</string>
+    <string name="tvQuest">1. Besaran yang dapat diukur dengan menggunakan mistar adalah ...</string>
+    <string name="icon_back">Activity</string>
 </resources>
