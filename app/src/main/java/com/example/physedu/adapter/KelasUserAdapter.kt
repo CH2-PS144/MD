@@ -18,9 +18,9 @@ class KelasUserAdapter (private val listKelas:ArrayList<KelasUser>) : RecyclerVi
         this.onItemClickCallback = onItemClickCallback
     }
     class ListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val tvNama: TextView = itemView.findViewById(R.id.tv_item_KelasUser)
+        val tvNama: TextView = itemView.findViewById(R.id.tvItemName)
         val btnMulai: TextView = itemView.findViewById(R.id.btn_ayoMulai)
-        val imgGambar: ImageView = itemView.findViewById(R.id.img_item_gambar)
+        val imgGambar: ImageView = itemView.findViewById(R.id.img_avatar)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListViewHolder {
