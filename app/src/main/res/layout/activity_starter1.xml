@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".starter.Starter1">
+    tools:context=".ui.starter.Starter1">
 
     <ImageView
         android:id="@+id/img_starter1"
