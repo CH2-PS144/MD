@@ -4,49 +4,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".EksekusiActivity">
+    tools:context=".ui.eksekusi.EksekusiActivity">
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cdTextResult"
-        android:layout_width="300dp"
-        android:layout_height="150dp"
-        app:cardBackgroundColor="#B25DBDFC"
-        app:cardCornerRadius="20dp"
-        app:cardElevation="2dp"
-        android:layout_marginTop="20dp"
+    <TextView
+        android:id="@+id/tvQuest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hasil"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:padding="16dp">
-
-            <TextView
-                android:id="@+id/hasilSoal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                tools:text="soal"
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="14sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/hasilJawaban"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="12dp"
-                tools:text="jawaban"
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="12sp" />
-
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
+    <TextView
+        android:id="@+id/tvResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Result"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvQuest" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
