@@ -1,4 +1,4 @@
-package com.example.physedu.activity
+package com.example.physedu.ui.result
 
 import android.Manifest
 import android.annotation.SuppressLint
@@ -13,15 +13,19 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.core.content.ContextCompat
 import androidx.core.net.toUri
+import androidx.core.view.isVisible
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import com.bumptech.glide.Glide
-import com.example.physedu.EksekusiActivity
 import com.example.physedu.R
-import com.example.physedu.ViewModelFactory
+import com.example.physedu.data.Result
+import com.example.physedu.data.response.UploadResponse
+import com.example.physedu.data.utils.ViewModelFactory
+import com.example.physedu.data.utils.reduceFileImage
+import com.example.physedu.data.utils.uriToFile
 import com.example.physedu.databinding.ActivityResultBinding
-import com.example.physedu.response.UploadResponse
-import com.example.physedu.uriToFile
+import com.example.physedu.ui.eksekusi.EksekusiActivity
+import com.example.physedu.ui.main.MainActivity
 import kotlinx.coroutines.launch
 import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.MultipartBody
@@ -31,8 +35,7 @@ class ResultActivity : AppCompatActivity() {
     private lateinit var binding: ActivityResultBinding
     private var currentImageUri: Uri? = null
     private lateinit var resultViewModel: ResultViewModel
-    private val response = UploadResponse()
-
+    private lateinit var response: UploadResponse
 
     private val requestPermissionLauncher =
         registerForActivityResult(
@@ -76,7 +79,7 @@ class ResultActivity : AppCompatActivity() {
         if (!allPermissionsGranted()) {
             requestPermissionLauncher.launch(REQUIRED_PERMISSION)
         }
-        binding.hasilButton.setOnClickListener{uploadImage()}
+        binding.hasilButton.setOnClickListener { uploadImage() }
 
         val imageUriString = intent.getStringExtra("IMAGE_URI")
         val imageUri = Uri.parse(imageUriString)
@@ -89,11 +92,12 @@ class ResultActivity : AppCompatActivity() {
             .into(binding.previewImageView)
     }
 
+
     @SuppressLint("NewApi")
     private fun uploadImage() {
         currentImageUri = intent.getStringExtra("IMAGE_URI")?.toUri()
         currentImageUri?.let { uri ->
-            val imageFile = uriToFile(uri, this)
+            val imageFile = uriToFile(uri, this).reduceFileImage()
             Log.d("Image File", "showImage: ${imageFile.path}")
             val requestImageFile = imageFile.asRequestBody("image/jpeg".toMediaType())
             val multipartBody = MultipartBody.Part.createFormData(
@@ -104,40 +108,30 @@ class ResultActivity : AppCompatActivity() {
 
             lifecycleScope.launch {
                 resultViewModel.uploadGambar(multipartBody).observe(this@ResultActivity) {
-                    RESULT = response.result.toString()
-                    QUESTION = response.question.toString()
-                    val intent =
-                        Intent(this@ResultActivity, EksekusiActivity::class.java)
-                    intent.flags =
-                        Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
-                    startActivity(intent)
-//                    when (it) {
-//                        is Result.Success -> {
-//
-////                            AlertDialog.Builder(this@ResultActivity).apply {
-////                                setTitle("Success")
-////                                setMessage("Story created")
-////                                setPositiveButton("Continue") { _, _ ->
-////
-////                                }
-////                                create()
-////                                show()
-////                            }
-//                        }
-//
-//                        is Result.Loading -> {
-//
-//                        }
-//
-//                        is Result.Error -> {
-//
-//                        }
-//
-//                        else -> {}
-//                    }
+                    when (it) {
+                        is Result.Success -> {
+                            response = it.data
+                            val intent =
+                                Intent(this@ResultActivity, EksekusiActivity::class.java)
+                            intent.flags =
+                                Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
+                            intent.putExtra(EksekusiActivity.EXTRA_QUESTION, it.data.question)
+                            intent.putExtra(EksekusiActivity.EXTRA_RESULT, it.data.result)
+                            startActivity(intent)
+                        }
+
+                        is Result.Loading -> {
+                            binding.progressIndicator.isVisible = true
+                        }
+
+                        is Result.Error -> {
+                            binding.progressIndicator.isVisible = false
+                        }
+                        else -> {}
+                    }
                 }
             }
-        }?: showToast(getString(R.string.empty_image_warning))
+        } ?: showToast(getString(R.string.empty_image_warning))
     }
 
     private fun showToast(message: String) {
