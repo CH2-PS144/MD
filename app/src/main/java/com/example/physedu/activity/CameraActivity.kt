@@ -5,7 +5,6 @@ import android.content.Intent
 import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Build
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.OrientationEventListener
@@ -13,7 +12,9 @@ import android.view.Surface
 import android.view.WindowInsets
 import android.view.WindowManager
 import android.widget.Toast
+import androidx.activity.result.PickVisualMediaRequest
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.appcompat.app.AppCompatActivity
 import androidx.camera.core.CameraSelector
 import androidx.camera.core.ImageCapture
 import androidx.camera.core.ImageCaptureException
@@ -27,6 +28,7 @@ class CameraActivity : AppCompatActivity() {
     private lateinit var binding: ActivityCameraViewBinding
     private var cameraSelector: CameraSelector = CameraSelector.DEFAULT_BACK_CAMERA
     private var imageCapture: ImageCapture? = null
+    private var currentImageUri: Uri? = null
 
     private val requestPermissionLauncher =
         registerForActivityResult(
@@ -61,6 +63,7 @@ class CameraActivity : AppCompatActivity() {
                 else CameraSelector.DEFAULT_BACK_CAMERA
             startCamera()
         }
+        binding.galleryButton.setOnClickListener { gallery() }
         binding.captureImage.setOnClickListener { takePhoto() }
     }
 
@@ -68,6 +71,29 @@ class CameraActivity : AppCompatActivity() {
         super.onResume()
         hideSystemUI()
         startCamera()
+    }
+
+    private val launcherGallery = registerForActivityResult(
+        ActivityResultContracts.PickVisualMedia()
+    ) { uri: Uri? ->
+        if (uri != null) {
+            currentImageUri = uri
+            showImage()
+        } else {
+            Log.d("Photo Picker", "No media selected")
+        }
+    }
+
+    private fun showImage() {
+        currentImageUri?.let {
+            Log.d("Image URI", "showImage: $it")
+            val intent = Intent(this, ResultActivity::class.java)
+            intent.putExtra("IMAGE_URI", currentImageUri.toString())
+            startActivity(intent)
+        }
+    }
+    private fun gallery() {
+        launcherGallery.launch(PickVisualMediaRequest(ActivityResultContracts.PickVisualMedia.ImageOnly))
     }
 
     private fun startCamera() {
