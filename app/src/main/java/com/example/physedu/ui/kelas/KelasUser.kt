@@ -1,4 +1,4 @@
-package com.example.physedu.activity
+package com.example.physedu.ui.kelas
 
 import android.os.Parcelable
 import kotlinx.parcelize.Parcelize

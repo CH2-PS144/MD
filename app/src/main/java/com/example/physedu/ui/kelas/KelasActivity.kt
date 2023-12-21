@@ -1,4 +1,4 @@
-package com.example.physedu.activity
+package com.example.physedu.ui.kelas
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

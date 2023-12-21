@@ -1,16 +1,18 @@
-package com.example.physedu.activity
+package com.example.physedu.ui.main
 
 import android.content.Intent
 import android.net.Uri
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.net.toUri
 import androidx.fragment.app.Fragment
 import com.example.physedu.R
 import com.example.physedu.databinding.ActivityMainBinding
 import com.example.physedu.fragment.AboutFragment
 import com.example.physedu.fragment.HomeFragment
+import com.example.physedu.ui.camera.CameraActivity
+import com.example.physedu.ui.result.ResultActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {

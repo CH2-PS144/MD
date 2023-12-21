@@ -70,4 +70,7 @@
     <string name="description_image_study_bg">Deskripsi Konten untuk Gambar Silabus</string>
     <string name="tvQuest">1. Besaran yang dapat diukur dengan menggunakan mistar adalah ...</string>
     <string name="icon_back">Activity</string>
+    <string name="empty_image_warning">Tidak Boleh Kosong</string>
+    <string name="Question">Pertanyaan</string>
+    <string name="Result">Hasil</string>
 </resources>

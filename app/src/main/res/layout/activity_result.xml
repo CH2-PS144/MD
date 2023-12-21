@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.ResultActivity">
+    tools:context=".ui.result.ResultActivity">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -30,7 +30,7 @@
         android:layout_height="350dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/cameraXButton"
+        app:layout_constraintBottom_toTopOf="@+id/hasilButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar"
@@ -38,7 +38,7 @@
 
 
     <Button
-        android:id="@+id/cameraXButton"
+        android:id="@+id/hasilButton"
         android:layout_width="150dp"
         android:layout_height="45dp"
         android:layout_marginEnd="32dp"
@@ -48,7 +48,7 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
-        android:id="@+id/galleryButton"
+        android:id="@+id/ulangiButton"
         android:layout_width="150dp"
         android:layout_height="45dp"
         android:layout_marginStart="32dp"
@@ -56,7 +56,7 @@
         android:scaleType="fitCenter"
         android:text="@string/Ulangi"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/cameraXButton" />
+        app:layout_constraintTop_toTopOf="@+id/hasilButton" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cdTextResult"
@@ -68,7 +68,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/galleryButton">
+        app:layout_constraintTop_toBottomOf="@+id/ulangiButton">
 
         <LinearLayout
             android:layout_width="match_parent"

@@ -1,7 +1,7 @@
-package com.example.physedu.activity
+package com.example.physedu.ui.quiz
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.example.physedu.R
 
 class KoreksiPilganActivity : AppCompatActivity() {
