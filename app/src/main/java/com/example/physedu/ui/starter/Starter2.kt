@@ -1,4 +1,4 @@
-package com.example.physedu.starter
+package com.example.physedu.ui.starter
 
 import android.annotation.SuppressLint
 import android.content.Intent
@@ -7,7 +7,7 @@ import android.os.Bundle
 import android.view.WindowManager
 import android.widget.Button
 import com.example.physedu.R
-import com.example.physedu.activity.MainActivity
+import com.example.physedu.ui.main.MainActivity
 
 class Starter2 : AppCompatActivity() {
     @SuppressLint("MissingInflatedId")
