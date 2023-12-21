@@ -1,4 +1,4 @@
-package com.example.physedu.activity
+package com.example.physedu.ui.camera
 
 import android.Manifest
 import android.content.Intent
@@ -21,7 +21,8 @@ import androidx.camera.core.ImageCaptureException
 import androidx.camera.core.Preview
 import androidx.camera.lifecycle.ProcessCameraProvider
 import androidx.core.content.ContextCompat
-import com.example.physedu.createCustomTempFile
+import com.example.physedu.ui.result.ResultActivity
+import com.example.physedu.data.utils.createCustomTempFile
 import com.example.physedu.databinding.ActivityCameraViewBinding
 
 class CameraActivity : AppCompatActivity() {
