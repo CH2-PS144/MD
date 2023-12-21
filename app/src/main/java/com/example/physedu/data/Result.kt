@@ -1,4 +1,4 @@
-package com.example.physedu
+package com.example.physedu.data
 
 sealed class Result<out R> private constructor() {
     data class Success<out T>(val data: T) : Result<T>()
