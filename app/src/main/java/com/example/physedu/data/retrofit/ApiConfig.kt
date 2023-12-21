@@ -1,4 +1,4 @@
-package com.example.physedu.retrofit
+package com.example.physedu.data.retrofit
 
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
