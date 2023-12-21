@@ -1,9 +1,10 @@
-package com.example.physedu
+package com.example.physedu.data.repos
 
 
 import androidx.lifecycle.liveData
-import com.example.physedu.response.UploadResponse
-import com.example.physedu.retrofit.ApiService
+import com.example.physedu.data.Result
+import com.example.physedu.data.response.UploadResponse
+import com.example.physedu.data.retrofit.ApiService
 import com.google.gson.Gson
 import okhttp3.MultipartBody
 import retrofit2.HttpException
@@ -15,8 +16,8 @@ class UserRepository private constructor(
     suspend fun uploadGambar(file: MultipartBody.Part) = liveData {
         emit(Result.Loading)
         try {
-            val response = apiService.uploadGambar(file)
-            emit(Result.Success(response))
+            val succsessResponse = apiService.uploadGambar(file)
+            emit(Result.Success(succsessResponse))
         } catch (e: HttpException) {
             val jsonInString = e.response()?.errorBody()?.string()
             val errorBody = Gson().fromJson(jsonInString, UploadResponse::class.java)
