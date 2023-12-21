@@ -8,7 +8,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.physedu.R
-import com.example.physedu.activity.KelasUser
+import com.example.physedu.ui.kelas.KelasUser
 
 class KelasUserAdapter (private val listKelas:ArrayList<KelasUser>) : RecyclerView.Adapter<KelasUserAdapter.ListViewHolder>()  {
 
@@ -18,6 +18,7 @@ class KelasUserAdapter (private val listKelas:ArrayList<KelasUser>) : RecyclerVi
         this.onItemClickCallback = onItemClickCallback
     }
     class ListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+
         val tvNama: TextView = itemView.findViewById(R.id.tvItemName)
         val btnMulai: TextView = itemView.findViewById(R.id.btn_ayoMulai)
         val imgGambar: ImageView = itemView.findViewById(R.id.img_avatar)

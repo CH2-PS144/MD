@@ -10,9 +10,9 @@ import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.physedu.R
-import com.example.physedu.activity.KelasActivity
-import com.example.physedu.`object`.ClassObject
-import com.example.physedu.activity.KelasUser
+import com.example.physedu.ui.kelas.KelasActivity
+import com.example.physedu.data.`object`.ClassObject
+import com.example.physedu.ui.kelas.KelasUser
 import com.example.physedu.adapter.KelasUserAdapter
 
 class HomeFragment : Fragment() {

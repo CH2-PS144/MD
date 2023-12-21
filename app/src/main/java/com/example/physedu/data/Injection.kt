@@ -1,7 +1,8 @@
-package com.example.physedu
+package com.example.physedu.data
 
 import android.content.Context
-import com.example.physedu.retrofit.ApiConfig
+import com.example.physedu.data.repos.UserRepository
+import com.example.physedu.data.retrofit.ApiConfig
 
 object Injection {
     fun provideRepository(context: Context): UserRepository {
