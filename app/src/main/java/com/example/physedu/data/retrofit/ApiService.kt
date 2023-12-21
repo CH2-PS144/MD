@@ -1,6 +1,6 @@
-package com.example.physedu.retrofit
+package com.example.physedu.data.retrofit
 
-import com.example.physedu.response.UploadResponse
+import com.example.physedu.data.response.UploadResponse
 import okhttp3.MultipartBody
 import retrofit2.http.Multipart
 import retrofit2.http.POST
