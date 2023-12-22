@@ -1,8 +1,8 @@
 package com.example.physedu.ui.kelas
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.annotation.StringRes
+import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager2.widget.ViewPager2
 import com.example.physedu.R
 import com.example.physedu.adapter.SectionsPagerAdapter
@@ -15,7 +15,6 @@ class KelasActivity : AppCompatActivity() {
         private val TAB_TITLES = intArrayOf(
             R.string.tab_text_1,
             R.string.tab_text_2,
-            R.string.tab_text_3
         )
     }
     override fun onCreate(savedInstanceState: Bundle?) {
