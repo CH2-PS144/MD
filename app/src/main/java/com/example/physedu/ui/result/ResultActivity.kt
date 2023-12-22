@@ -24,6 +24,7 @@ import com.example.physedu.data.utils.ViewModelFactory
 import com.example.physedu.data.utils.reduceFileImage
 import com.example.physedu.data.utils.uriToFile
 import com.example.physedu.databinding.ActivityResultBinding
+import com.example.physedu.ui.camera.CameraActivity
 import com.example.physedu.ui.eksekusi.EksekusiActivity
 import com.example.physedu.ui.main.MainActivity
 import kotlinx.coroutines.launch
@@ -80,6 +81,10 @@ class ResultActivity : AppCompatActivity() {
             requestPermissionLauncher.launch(REQUIRED_PERMISSION)
         }
         binding.hasilButton.setOnClickListener { uploadImage() }
+        binding.ulangiButton.setOnClickListener{
+            val intent = Intent(this, CameraActivity::class.java)
+            startActivity(intent)
+        }
 
         val imageUriString = intent.getStringExtra("IMAGE_URI")
         val imageUri = Uri.parse(imageUriString)

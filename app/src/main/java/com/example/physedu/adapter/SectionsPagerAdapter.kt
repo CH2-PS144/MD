@@ -8,12 +8,6 @@ import com.example.physedu.fragment.SilabusFragment
 
 class SectionsPagerAdapter (activity: AppCompatActivity) : FragmentStateAdapter(activity)  {
     var appName: String= "hallo"
-
-
-    override fun getItemCount(): Int {
-        return 3
-    }
-
     override fun createFragment(position: Int): Fragment {
         val fragment = SilabusFragment()
         fragment.arguments = Bundle().apply {
@@ -22,4 +16,10 @@ class SectionsPagerAdapter (activity: AppCompatActivity) : FragmentStateAdapter(
         }
         return fragment
     }
+
+    override fun getItemCount(): Int {
+        return 1
+    }
+
+
 }

@@ -18,7 +18,8 @@
     <string name="jumlah_soal">Jumlah Soal : 5</string>
     <string name="starter_tx">Pindai soal fisika untuk hasil \n instan</string>
     <string name="starter2_tx">Telusuri berbagai rumus dan \n soal</string>
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="about_us">Hello Physedu All</string>
+    <string name="hello_blank_fragment">Hello Black Fragment</string>
     <string name="benar">Benar</string>
     <string name="salah">Salah</string>
     <string name="score">Lihat Score </string>
@@ -73,4 +74,47 @@
     <string name="empty_image_warning">Tidak Boleh Kosong</string>
     <string name="Question">Pertanyaan</string>
     <string name="Result">Hasil</string>
+    <string name="latihan">
+1. Apa yang diukur dengan satuan meter? \n\n
+
+a) Waktu \n
+b) Panjang \n
+c) Berat \n
+d) Suhu \n\n
+
+2. Satuan apa yang digunakan untuk mengukur berat? \n\n
+
+a) Meter \n
+b) Kilogram \n
+c) Detik \n
+d) Liter \n\n
+
+3. Apa yang diukur dengan satuan detik? \n\n
+
+a) Berat \n
+b) Panjang \n
+c) Waktu \n
+d) Suhu \n\n
+
+4. Apa satuan yang biasa digunakan untuk mengukur suhu? \n\n
+
+a) Kelvin \n
+b) Meter \n
+c) Kilogram \n
+d) Ampere \n\n
+
+5. Berapakah satuan yang digunakan untuk mengukur jumlah zat dalam kimia? \n\n
+
+a) Kelvin \n
+b) Mole \n
+c) Watt \n
+d) Hertz \n\n
+
+Kunci Jawaban: \n
+b) Panjang \n
+b) Kilogram \n
+c) Waktu \n
+a) Kelvin \n
+b) Mole \n
+</string>
 </resources>
