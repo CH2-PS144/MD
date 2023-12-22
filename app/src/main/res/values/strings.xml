@@ -1,7 +1,9 @@
 <resources>
     <string name="app_name">PhysEdu</string>
+    <string name="id_team">CH2 - PS144</string>
     <string name="starter_btn_lewati">Lewati</string>
     <string name="starter_btn_lanjut">Lanjut</string>
+    <string name="starter_btn_kembali">Kembali</string>
     <string name="title_kamera">Kamera</string>
     <string name="title_home">Home</string>
     <string name="title_about">About</string>
@@ -10,11 +12,109 @@
     <string name="ayoo">Ayoo!!</string>
     <string name="pilih_kelasmu">Pilih Kelas Kamu</string>
     <string name="kategori_kelas">Kategori Kelas</string>
-    <string name="kelas_7">Kelas VII</string>
-    <string name="kelas_8">Kelas VIII</string>
-    <string name="kelas_9">Kelas IX</string>
+    <string name="besaran_dan_pengukuran">Besaran " &amp; " Pengukuran</string>
     <string name="ayo_belajar">Ayo Belajar</string>
+    <string name="mulai">Mulai</string>
+    <string name="jumlah_soal">Jumlah Soal : 5</string>
     <string name="starter_tx">Pindai soal fisika untuk hasil \n instan</string>
     <string name="starter2_tx">Telusuri berbagai rumus dan \n soal</string>
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="about_us">Hello Physedu All</string>
+    <string name="hello_blank_fragment">Hello Black Fragment</string>
+    <string name="benar">Benar</string>
+    <string name="salah">Salah</string>
+    <string name="score">Lihat Score </string>
+    <string name="content_tab_text">Kelas %1$d</string>
+    <string name="tab_text_1">Silabus</string>
+    <string name="tab_text_2">Latihan Soal</string>
+    <string name="tab_text_3">Referensi Video</string>
+
+    <string-array name="kelas">
+        <item>
+            <item>Kelas VII</item>
+            <item>Kelas VIII</item>
+            <item>Kelas IX</item>
+        </item>
+    </string-array>
+
+    <string-array name="mulai">
+        <item>Ayo Mulai</item>
+        <item>Ayo Mulai</item>
+        <item>Ayo Mulai</item>
+    </string-array>
+
+    <string-array name="gambar">
+        <item>@drawable/icon_kelas_1</item>
+        <item>@drawable/icon_kelas_2</item>
+        <item>@drawable/icon_kelas_3</item>
+    </string-array>
+
+
+    <string name="ucapan_selamat">Wow!!\n
+        selamat ya! Kamu telah melewati tantangan soal fisika tentang Besaran dan Pengukuran Semangat terus belajar fisika, pasti bisa lebih paham lagi
+</string>
+
+    <string name="Head_materi_besaran">Haii Physedu Friends!</string>
+    <string name="head2_yuk_belajar">Yukk Belajar Tentang Pengukuran Dasar</string>
+    <string name="besaran_materi">Pengukuran adalah kegiatan membandingkan suatu besaran dengan besaran sejenisnya yang telah ditetapkan sebagai satuan. Besaran adalah segala sesuatu yang dapat diukur dan dinyatakan dengan angka. Satuan adalah ukuran yang telah disepakati secara internasional untuk menyatakan suatu besaran.\n\n
+    "Dalam pengukuran terdapat dua hal penting yang harus di perhatikan :" \n\n
+    1. Besaran \n
+    2. Satuan \n\n
+    Besaran Pokok adalah besaran yang satuannya telah didefinisikan secara internasional. Besaran pokok ada tujuh, yaitu:</string>
+
+    <string name="besaran_turunan">Besaran Turunan adalah besaran yang ditetapkan berdasarkan besaran pokok. Satuannya pun diturunkan dari beberapa satuan besaran pokok. Sebagai contoh untuk menentukan kecepatan suatu benda bergerak, kita perlu mengukur panjang lintasan dan waktu yang diperlukan untuk menempuh lintasan tersebut.</string>
+    <string name="besaran_satuan">Satuan Dalam melakukan pengukuran, agar seragam maka dianggap perlu untuk menetapkan suatu pembanding dalam pengukuran. Pembanding ini tetap, tidak berubah-ubah dan dapat digunakan secara umum di mana saja. Inilah yang disebut sebagai satuan baku.\n\n
+    Satuan yang tidak tetap, misalnya kaki adalah satuan tidak baku. Adapun untuk suhu, satuan yang sering kita gunakan adalah derajat Celsius, namun ini bukan satuan standar dalam Sains. Di negara sub tropis sering digunakan satuan Fahrenheit. Dalam Sains, satuan suhu yang digunakan sebagai Standar Internasional adalah Kelvin.</string>
+    <string name="upload">Upload</string>
+    <string name="Ulangi">Ulangi</string>
+    <string name="hasil">Hasil </string>
+    <string name="camera">Camera</string>
+    <string name="description_image_study_bg">Deskripsi Konten untuk Gambar Silabus</string>
+    <string name="tvQuest">1. Besaran yang dapat diukur dengan menggunakan mistar adalah ...</string>
+    <string name="icon_back">Activity</string>
+    <string name="empty_image_warning">Tidak Boleh Kosong</string>
+    <string name="Question">Pertanyaan</string>
+    <string name="Result">Hasil</string>
+    <string name="latihan">
+1. Apa yang diukur dengan satuan meter? \n\n
+
+a) Waktu \n
+b) Panjang \n
+c) Berat \n
+d) Suhu \n\n
+
+2. Satuan apa yang digunakan untuk mengukur berat? \n\n
+
+a) Meter \n
+b) Kilogram \n
+c) Detik \n
+d) Liter \n\n
+
+3. Apa yang diukur dengan satuan detik? \n\n
+
+a) Berat \n
+b) Panjang \n
+c) Waktu \n
+d) Suhu \n\n
+
+4. Apa satuan yang biasa digunakan untuk mengukur suhu? \n\n
+
+a) Kelvin \n
+b) Meter \n
+c) Kilogram \n
+d) Ampere \n\n
+
+5. Berapakah satuan yang digunakan untuk mengukur jumlah zat dalam kimia? \n\n
+
+a) Kelvin \n
+b) Mole \n
+c) Watt \n
+d) Hertz \n\n
+
+Kunci Jawaban: \n
+b) Panjang \n
+b) Kilogram \n
+c) Waktu \n
+a) Kelvin \n
+b) Mole \n
+</string>
 </resources>

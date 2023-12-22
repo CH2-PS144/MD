@@ -5,12 +5,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.Starter1">
+    tools:context=".ui.starter.Starter1">
 
     <ImageView
         android:id="@+id/img_starter1"
-        android:layout_width="300dp"
+        android:layout_width="350dp"
         android:layout_height="300dp"
+        android:layout_marginTop="35dp"
         android:src="@drawable/logo_starter2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -20,10 +21,10 @@
         android:id="@+id/informasi_starter"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="70dp"
         android:text="@string/starter2_tx"
         android:textAlignment="center"
-        android:textColor="@color/biru_tua"
+        android:textColor="@color/dark_blue"
         android:textStyle="bold"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -35,28 +36,29 @@
         android:id="@+id/slider_starter"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="70dp"
         android:src="@drawable/slider1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/informasi_starter" />
 
     <Button
+        android:id="@+id/Str2btn_lanjut"
         android:layout_width="140dp"
         android:layout_height="70dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="70dp"
         android:text="@string/starter_btn_lanjut"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.512"
-        app:layout_constraintStart_toEndOf="@+id/button"
+        app:layout_constraintStart_toEndOf="@+id/Str2btn_kembali"
         app:layout_constraintTop_toBottomOf="@+id/slider_starter" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/Str2btn_kembali"
         android:layout_width="140dp"
         android:layout_height="70dp"
-        android:layout_marginTop="48dp"
-        android:text="@string/starter_btn_lewati"
+        android:layout_marginTop="70dp"
+        android:text="@string/starter_btn_kembali"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.173"
         app:layout_constraintStart_toStartOf="parent"
